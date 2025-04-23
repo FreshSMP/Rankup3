@@ -339,6 +339,10 @@ public class InfoCommand implements TabExecutor {
       sender.sendMessage(ChatColor.GREEN + "/" + label + " playtime " + ChatColor.YELLOW + "View your playtime");
     }
 
+    if (sender.hasPermission("rankup.checkversion")) {
+      notifier.notify(sender, false);
+    }
+
     return true;
   }
 
